@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block js %}
+<script type="text/javascript">
+  var url = "http://www.example.com"; //ジャンプ先のURLを指定
+  var moveTime = 5000; //移動までの時間をミリ秒で指定
+function jump(){
+	location.href = url;
+}
+setTimeout (jump, moveTime);
+//-->
+</script>
+{% endblock %}
+{% block title %}Page Not Found｜Example{% endblock %}
+{% block content %}
+<div class="container">
+  <h1>探しているページが見当たりません。</h1>
+  <p>5秒後にTOPページへ移ります。</p>
+  <p>※移行されない場合は右リンクをクリックお願いします。<a href="http://www.example.com">TOPページへ移動する</a></p>
+</div><!--/.container-->
+{% endblock %}

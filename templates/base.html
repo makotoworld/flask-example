@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<meta charset="utf-8">
+<title>{% block title %}Example{% endblock %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/static/css/bootstrap.css" rel="stylesheet">
+<link href="/static/css/master.css" rel="stylesheet">
+<link href="/static/css/bootstrap-responsive.css" rel="stylesheet">{% block css %}{% endblock %}
+<script src="/static/js/jquery.js"></script>{% block header_js %}{% endblock %}
+</head>
+{% block body %}{% endblock %}
+<div class="navbar header">
+<div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+<h1><a href="/"><img class="logo" src="/static/img/logo.png" alt="Example"></a></h1>
+<div class="nav-collapse">
+<ul class="nav">
+<li class='top'><a href="/">トップ</a></li>
+</ul>
+</div><!--/.nav-collapse-->
+</div><!--/.container-->
+</div><!--/.header-->{% block content %}{% endblock %}
+<div class="footer">
+<div class="container">
+<div class="row">
+<a href="#top" class="page-scroll">ページ上部へ</a>
+<div class="span6 information">
+<div class="copyright">© {{ "%Y"|date_now }} Example</div>
+</div><!--/.span-->
+</div><!--/.row-->
+</div><!--/.container-->
+</div><!--/.footer-->
+</body>
+</html>
